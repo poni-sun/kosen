@@ -108,7 +108,10 @@ ins::after{content: "new!";font-family: 'Skranji', cursive; color: #000; margin-
    border-color: khaki;
    font-size: 2rem;
 }
-
+/*文字白色*/
+.font_white{
+   color: white;
+}
 /* 展示ページの背景色 */
 .work{background: #f4f4f4;}
 /* 小説ページ */
