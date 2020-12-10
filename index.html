@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>タイトル</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="site">
+<div class="container">
+  <div class="row">
+    <header>
+    <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    <div class="header">
+      <h1 class="site-title"><a href="index.html">単位計算</a></h1>
+      <!--<span class="lastup">last up : 『<a href="sample-txt.html">作品名サンプル</a>』</span>
+      -->
+        <nav>
+      <ul class="gnav">
+        <li><a href="#TEXT">text</a></li>
+        <!--
+        <li><a href="#ILLUST">illust</a></li>
+        <li><a href="bkm.html">bkm</a></li>
+        <li><a href="mail.html">mail</a></li>
+        -->
+      </ul>
+      </nav>
+    </div>
+    </div>
+    </header>
+  </div>
+  <div class="row">
+    <main>
+
+    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+      <section>
+        <h2>Information</h2>
+        <div class="inner">
+        <section>
+          <p>高専生の単位計算を楽にするBookmarkletを作成しました。</p>
+        </section>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="TEXT">Text</h2>
+        <div class="inner">
+        <section>
+          <h3>単位計算Bookmarklet</h3>
+
+          <p>下のボタンをブックマークバーにドラッグ&ドロップで完了<br>
+            <a class="btn btn-success btn-success" href="javascript:(function()%7Blet%20subjects%
+            3D%7B%7D%3Blet%20subjects_selected%3Dnew%20Set()%3Blet%20CLICKED_CLASS%3D%22
+            sum-clicked%22%3Bfunction%20__is_selected(target)%7Breturn%20target.classList
+            .contains(CLICKED_CLASS)%3B%7Dfunction%20__toggle_unit(target)%7Blet%20ty%3Dtarget
+            .children%5B0%5D.innerText%3Blet%20id%3Dtarget.children%5B3%5D
+            .innerText%3Bif(__is_selected(target))%7Btarget.setAttribute
+            (%22style%22%2C%22%22)%3Btarget.classList.remove(CLICKED_CLASS)
+            %3Bsubjects_selected.delete(id)%7Delse%7Btarget
+            .setAttribute(%22style%22%2C%22background%3A%23b4ebfa%3B%22)%3Btarget
+            .classList.add(CLICKED_CLASS)%3Bsubjects_selected.add(id)%7D%7Dfunction%20__select_unit
+            (target)%7Bif(!__is_selected(target))%7B__toggle_unit(target)
+            %3B%7D%7Dfunction%20__unselect_unit(target)%7Bif(__is_selected(target)
+            )%7B__toggle_unit(target)%3B%7D%7Dfor(let%20target%20of%20document.getElementsByTagName
+            (%22tr%22))%7Bif(target.getAttribute(%22data-course-value%22)%3D%3D%22%22)%7Blet%20num%
+            3DparseInt(target.children%5B5%5D.innerText)%3Bif(isNaN(num))%7Bcontinue%3B%7Dlet%20ty%
+            Dtarget.children%5B0%5D.innerText%3Blet%20id%3Dtarget.children%5B3%5D.innerText%3Blet%2
+            0name%3Dtarget.children%5B2%5D.innerText%3Bsubjects%5Bid%5D%3D%7Btype%3A%20ty%2Cname%3A
+            %20name%2Cunit%3A%20num%2Celem%3A%20target%7D%3Btarget.children%5B2%5D.innerHTML%3Dname
+            %3Btarget.onclick%3Dfunction(e)%7B__toggle_unit(target)%3B%7D%7D%7Dfunction%20__reset_s
+            elected(e)%7Bfor(let%20id%20of%20subjects_selected.values())%7B__toggle_unit(subjects%5
+            Bid%5D.elem)%3B%7D%7Dfunction%20__show_units(e)%7Blet%20ippan%3D0%3Blet%20senmon%3D0%3B
+            for(let%20id%20of%20subjects_selected.values())%7Bif(subjects%5Bid%5D.type%3D%3D%22%E5%
+            B0%82%E9%96%80%22)%7Bsenmon%20%2B%3Dsubjects%5Bid%5D.unit%3B%7Delse%7Bippan%20%2B%3Dsub
+            jects%5Bid%5D.unit%3B%7D%7Dalert(%22%E4%B8%80%E8%88%AC%E5%8D%98%E4%BD%8D%E6%95%B0%E3%81
+            %AF%22%20%2B%20ippan%20%2B%20%22%5Cn%E5%B0%82%E9%96%80%E5%8D%98%E4%BD%8D%E6%95%B0%E3%81
+            %AF%22%20%2B%20senmon%20%2B%20%22%5Cn%E5%90%88%E8%A8%88%E5%8D%98%E4%BD%8D%E6%95%B0%E3%8
+            1%AF%22%20%2B(ippan%20%2B%20senmon)%2B%20%22%E3%81%A7%E3%81%99%22)%3B%7Dlet%20span%3Ddo
+            cument.createElement(%22div%22)%3Bspan.style%3D%22position%3Afixed%3Bfont-size%3A3em%3B
+            left%3A20px%3Bbottom%3A50px%3B%22%3Blet%20button1%3Ddocument.createElement(%22button%22
+            )%3Bbutton1.textContent%3D%22%E3%83%AA%E3%82%BB%E3%83%83%E3%83%88%22%3Bbutton1.onclick%
+            3D__reset_selected%3Bspan.appendChild(button1)%3Blet%20button2%3Ddocument.createElement
+            (%22button%22)%3Bbutton2.textContent%3D%22%E5%8D%98%E4%BD%8D%E6%95%B0%E8%A8%88%E7%AE%97
+            %22%3Bbutton2.onclick%3D__show_units%3Bspan.appendChild
+            (button2)%3Bdocument.body.appendChild(span)%3B%7D)()%3Bvoid(0);">高専生単位計算</a>
+          </p>
+            ここに操作gifが入る予定です
+          <p>
+
+          </p>
+        </section>
+        </div>
+      </section>
+
+    </div>
+    </main>
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="copy"><small>image: <a href="http://hankodeasobu.com/">ハンコでアソブ</a></small></p>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /.container -->
+</body>
+</html>

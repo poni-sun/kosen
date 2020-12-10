@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>タイトル</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="work">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <main>
+      <div class="img">
+        <img src="img/img-450x450.png" alt="450x450"><br>
+        <p>コメントを書くとこんな感じ。画像は画面の横幅に合わせて縮小されます。原寸より大きくなることはありません。</p>
+        <img src="img/img-600x800.png" alt="600x800"><br>
+        <img src="img/img-724x1024.png" alt="724x1024"><br>
+        <img src="img/img-700x450.png" alt="700x450"><br>
+        <img src="img/img-1000x750.png" alt="1000x750">
+      </div>
+      </main>
+    <footer>
+    <nav>
+    <ul class="local-nav">
+      <li>&#8810;  prev</li><li><a href="index.html">top</a></li><li><a href="sample-txt.html">next &#8811;</a></li>
+    </ul>
+    </nav>
+    <hr>
+    <aside>
+    <h2>作品ページに使えそうな部品</h2>
+    <h3>拍手ボタン</h3>
+    <form action="#" method="post">
+      <input type="submit" value="いいね！" class="btn">
+    </form>
+    <h3>選択式</h3>
+    <form action="#" method="post" class="kansou">
+      <label><input type="checkbox" name="作品名[]" value="萌えた！">萌えた！</label>
+      <label><input type="checkbox" name="作品名[]" value="面白かった(笑)">面白かった(笑)</label>
+      <label><input type="checkbox" name="作品名[]" value="需要あるよ！">需要あるよ！</label>
+      <label><input type="checkbox" name="作品名[]" value="続きが気になる…">続きが気になる…</label>
+      <input type="submit" value="応援！" class="btn-inline">
+    </form>
+    <h3>小さいメールフォーム（mail.htmlと同じもの）</h3>
+    <form action="#" method="post">
+      <textarea cols="40" rows="1" placeholder="一言あればお気軽に！" class="comment"></textarea>
+      <input type="submit" value="送信" class="btn-color">
+    </form>
+    <h3>合わせ技</h3>
+    <form action="#" method="post" class="kansou">
+      <label><input type="checkbox" name="作品名[]" value="萌えた！">萌えた！</label>
+      <label><input type="checkbox" name="作品名[]" value="面白かった(笑)">面白かった(笑)</label>
+      <label><input type="checkbox" name="作品名[]" value="需要あるよ！">需要あるよ！</label>
+      <label><input type="checkbox" name="作品名[]" value="続きが気になる…">続きが気になる…</label><br>
+      <textarea cols="40" rows="1" placeholder="チェックボックスだけでも送れます" class="comment"></textarea>
+      <input type="submit" value="送信" class="btn-color">
+    </form>
+    <hr>
+    <h2>各種フォーム部品について</h2>
+    <ul>
+      <li>送信ボタンのclass名を<code>btn-color</code>とすれば背景色が付きます。</li>
+      <li>チェックボックスのフォーム部品は<a href="https://www.php-factory.net/">PHP工房</a>さんのMailForm01（UTF-8版）に合わせた記述になっています。【作品名】萌えた！という風に受信でき便利です。web拍手公式やPatiPatiで使うとおそらく文字化けするので（このHTML文書がUTF-8のため）、HTMLの文字コードをShift_JISに変換するといいかもしれません。</li>
+      <li>一番上の拍手ボタンは単なるボタンなので、単品使いであれば文字化けの心配はありません。</li>
+    </ul>
+    </aside>
+    </footer>
+    </div>
+  </div><!-- /.row -->
+</div><!-- /.container -->
+</body>
+</html>
